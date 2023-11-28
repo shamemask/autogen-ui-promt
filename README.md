@@ -22,7 +22,7 @@ export OPENAI_API_KEY=<your key>
 Установить из исходного кода
 
 ```bash
-git clone git@github.com:victordibia/autogen-ui.git
+git clone https://github.com/shamemask/autogen-ui-promt.git
 cd autogenui
 pip install -e .
 ```
