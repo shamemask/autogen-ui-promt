@@ -23,6 +23,7 @@ dependencies = [
     "fastapi",
     "typer",
     "uvicorn",
+    "langchain",
     "pyautogen"
 ]
 optional-dependencies = {web = ["fastapi", "uvicorn"]}
