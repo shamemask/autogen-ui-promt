@@ -5,8 +5,7 @@
 from typing import Dict
 import autogen
 
-from uniswap import answer_uniswap_question
-from .marketer import MarketerAgent
+from .uniswap import answer_uniswap_question
 from .utils import parse_token_usage
 import time
 
@@ -47,7 +46,7 @@ class Manager(object):
             system_message=f"Создаёт рекламу для какого либо продукта",
         )
         # маркетолог должен проанализировать и дать список рекомендаций на основе pdf книги
-        marketer = MarketerAgent(name="Маркетолог",
+        marketer = autogen.UserProxyAgent(name="Маркетолог",
                                  max_consecutive_auto_reply=3,
                                  llm_config=llm_config,
                                  system_message="Анализирует созданную рекламу Копирайтером и дайт рекомендацию согласно full_documents")
